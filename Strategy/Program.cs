@@ -3,7 +3,7 @@
 using Strategy;
 using Strategy.Faixas;
 
-var tempoDeLocacao = TimeSpan.FromDays(2);
+Locacao locacao = new Locacao("Um livro", 2);
 IFaixaDeCalculo faixaAzul = new FaixaAzul();
 IFaixaDeCalculo faixaAmarela = new FaixaAmarela();
 IFaixaDeCalculo faixaVerde = new FaixaVerde();
@@ -11,10 +11,10 @@ IFaixaDeCalculo faixaBranca = new FaixaBranca();
 
 CalculadoraDeLocacao calculadora = new CalculadoraDeLocacao();
 
-var valorLocacaoAzul = calculadora.RealizaLocacao(tempoDeLocacao, faixaAzul);
-var valorLocacaoAmarela = calculadora.RealizaLocacao(tempoDeLocacao, faixaAmarela);
-var valorLocacaoVerde = calculadora.RealizaLocacao(tempoDeLocacao, faixaVerde);
-var valorLocacaoBranca = calculadora.RealizaLocacao(tempoDeLocacao, faixaBranca);
+var valorLocacaoAzul = calculadora.RealizaLocacao(locacao, faixaAzul);
+var valorLocacaoAmarela = calculadora.RealizaLocacao(locacao, faixaAmarela);
+var valorLocacaoVerde = calculadora.RealizaLocacao(locacao, faixaVerde);
+var valorLocacaoBranca = calculadora.RealizaLocacao(locacao, faixaBranca);
 
 Console.WriteLine("Locação Azul: "+valorLocacaoAzul);
 Console.WriteLine("Locação Amarela: " + valorLocacaoAmarela);
