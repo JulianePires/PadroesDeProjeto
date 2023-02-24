@@ -1,4 +1,4 @@
-﻿namespace Strategy.Faixas;
+﻿namespace PadroesDeProjeto.Strategy.Faixas;
 
 public class FaixaBranca : IFaixaDeCalculo
 {

@@ -1,14 +1,13 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-using Strategy;
-using Strategy.Faixas;
+using PadroesDeProjeto.Strategy;
+using PadroesDeProjeto.Strategy.Faixas;
 
 Locacao locacao = new Locacao("Um livro", 2);
 IFaixaDeCalculo faixaAzul = new FaixaAzul();
 IFaixaDeCalculo faixaAmarela = new FaixaAmarela();
 IFaixaDeCalculo faixaVerde = new FaixaVerde();
 IFaixaDeCalculo faixaBranca = new FaixaBranca();
-
 CalculadoraDeLocacao calculadora = new CalculadoraDeLocacao();
 
 var valorLocacaoAzul = calculadora.RealizaLocacao(locacao, faixaAzul);

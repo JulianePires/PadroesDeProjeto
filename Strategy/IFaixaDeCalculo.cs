@@ -1,4 +1,4 @@
-﻿namespace Strategy
+﻿namespace PadroesDeProjeto.Strategy
 {
     public interface IFaixaDeCalculo
     {

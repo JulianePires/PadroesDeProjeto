@@ -1,8 +1,7 @@
-﻿using Strategy;
-using Strategy.Faixas;
-using System.Text.RegularExpressions;
+﻿using PadroesDeProjeto.Strategy;
+using PadroesDeProjeto.Strategy.Faixas;
 
-namespace TestePadroesDeProjeto.Strategy;
+namespace PadroesDeProjeto.Tests.Strategy;
 
 public class TesteLocacao
 {
