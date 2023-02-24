@@ -2,6 +2,6 @@
 {
     public interface IFaixaDeCalculo
     {
-        double CalculaLocacao(TimeSpan tempo);
+        double CalculaLocacao(int diasDeLocacao);
     }
 }

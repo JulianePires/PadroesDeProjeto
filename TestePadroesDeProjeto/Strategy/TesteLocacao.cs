@@ -6,13 +6,12 @@ namespace TestePadroesDeProjeto.Strategy;
 
 public class TesteLocacao
 {
-    private double _valorFixo = 20.00;
-    private TimeSpan _tempoDeLocacao = TimeSpan.FromDays(2);
-    CalculadoraDeLocacao _calculadora = new CalculadoraDeLocacao();
+    private Locacao _locacao = new("Ponciá Vicêncio", 2);
+    CalculadoraDeLocacao _calculadora = new();
 
     private double CalculaLocacaoPorRegra(double porcentagem)
     {
-        return _valorFixo + _tempoDeLocacao.Days * porcentagem;
+        return _locacao.ValorFixo + _locacao.DiasDeLocacao * porcentagem;
     }
 
     [Fact]
@@ -22,7 +21,7 @@ public class TesteLocacao
         var valorCalculado = CalculaLocacaoPorRegra(regraFaixaAzul);
         IFaixaDeCalculo faixaAzul = new FaixaAzul();
 
-        var valorFinalLocacao = _calculadora.RealizaLocacao(_tempoDeLocacao, faixaAzul);
+        var valorFinalLocacao = _calculadora.RealizaLocacao(_locacao, faixaAzul);
 
         Assert.Equal(valorCalculado, valorFinalLocacao);
     }
@@ -34,7 +33,7 @@ public class TesteLocacao
         var valorCalculado = CalculaLocacaoPorRegra(regraFaixaBranca);
         IFaixaDeCalculo faixaBranca = new FaixaBranca();
 
-        var valorFinalLocacao = _calculadora.RealizaLocacao(_tempoDeLocacao, faixaBranca);
+        var valorFinalLocacao = _calculadora.RealizaLocacao(_locacao, faixaBranca);
 
         Assert.Equal(valorCalculado, valorFinalLocacao);
     }
@@ -46,7 +45,7 @@ public class TesteLocacao
         var valorCalculado = CalculaLocacaoPorRegra(regraFaixaVerde);
         IFaixaDeCalculo faixaVerde = new FaixaVerde();
 
-        var valorFinalLocacao = _calculadora.RealizaLocacao(_tempoDeLocacao, faixaVerde);
+        var valorFinalLocacao = _calculadora.RealizaLocacao(_locacao, faixaVerde);
 
         Assert.Equal(valorCalculado, valorFinalLocacao);
     }
@@ -58,7 +57,7 @@ public class TesteLocacao
         var valorCalculado = CalculaLocacaoPorRegra(regraFaixaAmarela);
         IFaixaDeCalculo faixaAmarela = new FaixaAmarela();
 
-        var valorFinalLocacao = _calculadora.RealizaLocacao(_tempoDeLocacao, faixaAmarela);
+        var valorFinalLocacao = _calculadora.RealizaLocacao(_locacao, faixaAmarela);
 
         Assert.Equal(valorCalculado, valorFinalLocacao);
     }

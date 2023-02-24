@@ -1,3 +1,0 @@
-﻿Você decide criar uma aplicação para locação de livros em uma biblioteca. A determinação de valores consiste em um valor base acrescido de um valor calculado a partir do produto do tempo de locação por uma taxa.
-
-Inicialmente parecia simples pois essa taxa era unificada, porém, veio a necessidade de catalogar os livros por faixas representadas por cores, diferenciando a porcentagem cobrada sobre o tempo locado. Com a inserção de cada faixa, você percebeu que a classe principal da locação iria ficando cada vez maior, deixando o código ilegível e complexo caso você quisesse alterar o percentual cobrado em outras taxas ou até adicionar mais uma faixa.

@@ -2,10 +2,10 @@
 {
     public class CalculadoraDeLocacao
     {
-        public double RealizaLocacao(TimeSpan tempo, IFaixaDeCalculo faixa)
+        public double RealizaLocacao(Locacao locacao, IFaixaDeCalculo faixa)
         {
-            double valorFixo = 20.00;
-            var valorFinal = valorFixo + faixa.CalculaLocacao(tempo);
+
+            var valorFinal = locacao.ValorFixo + faixa.CalculaLocacao(locacao.DiasDeLocacao);
             return valorFinal;
         }
     }

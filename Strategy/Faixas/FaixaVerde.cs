@@ -2,8 +2,8 @@
 
 public class FaixaVerde : IFaixaDeCalculo
 {
-    public double CalculaLocacao(TimeSpan tempo)
+    public double CalculaLocacao(int diasDeLocacao)
     {
-        return tempo.Days * 0.6;
+        return diasDeLocacao * 0.6;
     }
 }

@@ -2,8 +2,8 @@
 
 public class FaixaAmarela : IFaixaDeCalculo
 {
-    public double CalculaLocacao(TimeSpan tempo)
+    public double CalculaLocacao(int diasDeLocacao)
     {
-        return tempo.Days * 0.7;
+        return diasDeLocacao * 0.7;
     }
 }
