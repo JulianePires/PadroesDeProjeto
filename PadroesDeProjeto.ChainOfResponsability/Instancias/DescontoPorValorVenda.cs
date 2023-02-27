@@ -6,7 +6,7 @@ public class DescontoPorValorVenda : IDesconto
     
     public double Desconta(Venda venda)
     {
-        if(venda.Valor >= 300.00)
+        if(venda.Valor >= 30.00)
         {
             return venda.Valor * 0.4;
         }
