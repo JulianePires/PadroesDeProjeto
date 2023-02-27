@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PadroesDeProjeto.Strategy", "Strategy\PadroesDeProjeto.Strategy.csproj", "{45FEF21E-5118-4915-AA2D-EA2C02CEFD4E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PadroesDeProjeto.Strategy", "Strategy\PadroesDeProjeto.Strategy.csproj", "{45FEF21E-5118-4915-AA2D-EA2C02CEFD4E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PadroesDeProjeto.Tests", "TestePadroesDeProjeto\PadroesDeProjeto.Tests.csproj", "{243A2EBC-A7A5-491F-9FA0-4560D02651DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PadroesDeProjeto.Tests", "TestePadroesDeProjeto\PadroesDeProjeto.Tests.csproj", "{243A2EBC-A7A5-491F-9FA0-4560D02651DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PadroesDeProjeto.ChainOfResponsability", "PadroesDeProjeto.ChainOfResponsability\PadroesDeProjeto.ChainOfResponsability.csproj", "{66B0C2EC-3AEC-4731-A9A1-6CB736DC9920}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,18 @@ Global
 		{243A2EBC-A7A5-491F-9FA0-4560D02651DD}.Release|x64.Build.0 = Release|Any CPU
 		{243A2EBC-A7A5-491F-9FA0-4560D02651DD}.Release|x86.ActiveCfg = Release|Any CPU
 		{243A2EBC-A7A5-491F-9FA0-4560D02651DD}.Release|x86.Build.0 = Release|Any CPU
+		{66B0C2EC-3AEC-4731-A9A1-6CB736DC9920}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66B0C2EC-3AEC-4731-A9A1-6CB736DC9920}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66B0C2EC-3AEC-4731-A9A1-6CB736DC9920}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{66B0C2EC-3AEC-4731-A9A1-6CB736DC9920}.Debug|x64.Build.0 = Debug|Any CPU
+		{66B0C2EC-3AEC-4731-A9A1-6CB736DC9920}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{66B0C2EC-3AEC-4731-A9A1-6CB736DC9920}.Debug|x86.Build.0 = Debug|Any CPU
+		{66B0C2EC-3AEC-4731-A9A1-6CB736DC9920}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66B0C2EC-3AEC-4731-A9A1-6CB736DC9920}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66B0C2EC-3AEC-4731-A9A1-6CB736DC9920}.Release|x64.ActiveCfg = Release|Any CPU
+		{66B0C2EC-3AEC-4731-A9A1-6CB736DC9920}.Release|x64.Build.0 = Release|Any CPU
+		{66B0C2EC-3AEC-4731-A9A1-6CB736DC9920}.Release|x86.ActiveCfg = Release|Any CPU
+		{66B0C2EC-3AEC-4731-A9A1-6CB736DC9920}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
