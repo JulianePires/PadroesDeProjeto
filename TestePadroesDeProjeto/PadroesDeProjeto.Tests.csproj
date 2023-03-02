@@ -23,11 +23,13 @@
 
   <ItemGroup>
     <Folder Include="ChainOfResponsability\Base\" />
+    <Folder Include="TemplateMethod\" />
     <Folder Include="Strategy\" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\PadroesDeProjeto.ChainOfResponsability\PadroesDeProjeto.ChainOfResponsability.csproj" />
+    <ProjectReference Include="..\PadroesDeProjeto.TemplateMethod\PadroesDeProjeto.TemplateMethod.csproj" />
     <ProjectReference Include="..\Strategy\PadroesDeProjeto.Strategy.csproj" />
   </ItemGroup>
 
