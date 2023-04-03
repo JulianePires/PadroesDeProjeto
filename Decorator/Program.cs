@@ -4,9 +4,7 @@ using PadroesDeProjeto.Decorator.Decorators.Implementacoes;
 using PadroesDeProjeto.Decorator.Helpers;
 
 IPizza pizza = new Pizza();
-
 IPizza pizzaCalabresa = new PizzaCalabresa();
-
 IPizza pizzaCalabresaComFrango = new PizzaCalabresa(new PizzaFrango());
 
 Console.WriteLine("Pizza: " + pizza.PedePizza() + " | Valor: R$" + Formatador.FormataPreco(pizza.CalculaValor()));
