@@ -23,6 +23,7 @@
 
   <ItemGroup>
     <Folder Include="ChainOfResponsability\Base\" />
+    <Folder Include="State\" />
     <Folder Include="TemplateMethod\" />
     <Folder Include="Strategy\" />
   </ItemGroup>
