@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace PadroesDeProjeto.State.Estados
 {
-    public interface EstadosDoPlayer
+    public interface IEstadosDoPlayer
     {
         void GanhaPontosExtras(Player player);
-        void Zera();
-        void Perde();
-        void Finaliza();
+        public void SalvaPrisioneiro(Player player);
+        void Zera(Player player);
+        void Perde(Player player);
+        void Finaliza(Player player);
     }
 }
