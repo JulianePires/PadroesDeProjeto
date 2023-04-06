@@ -2,16 +2,16 @@
 {
     public abstract class PizzaDecorator : IPizza
     {
-        protected IPizza? Pizza;
+        protected IPizza? _pizza;
 
         public PizzaDecorator(IPizza pizza)
         {
-            Pizza = pizza;
+            _pizza = pizza;
         }
 
         public PizzaDecorator()
         {
-            Pizza = null;
+            _pizza = null;
         }
 
         public abstract double CalculaValor();
@@ -20,12 +20,12 @@
 
         protected double CalculaOutroValor()
         {
-            return (Pizza == null ? new Pizza().CalculaValor() : Pizza.CalculaValor());
+            return (_pizza == null ? new Pizza().CalculaValor() : _pizza.CalculaValor());
         }
 
         protected string PedeOutraPizza()
         {
-            return (Pizza == null ? new Pizza().PedePizza() : Pizza.PedePizza());
+            return (_pizza == null ? new Pizza().PedePizza() : _pizza.PedePizza());
         }
     }
 }
