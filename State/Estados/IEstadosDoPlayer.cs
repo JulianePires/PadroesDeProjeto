@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PadroesDeProjeto.State.Estados
+﻿namespace PadroesDeProjeto.State.Estados
 {
     public interface IEstadosDoPlayer
     {
