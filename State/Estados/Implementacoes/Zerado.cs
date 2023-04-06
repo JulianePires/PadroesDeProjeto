@@ -1,26 +1,34 @@
 ﻿namespace PadroesDeProjeto.State.Estados.Implementacoes
 {
-    //TODO: Implementar métodos
-    public class Zerado : EstadosDoPlayer
+    public class Zerado : IEstadosDoPlayer
     {
         public void GanhaPontosExtras(Player player)
         {
-            throw new NotImplementedException();
+            player.Pontuacao += 40 + player.PrisioneirosSalvos * 30;
+            Console.WriteLine($"Você ganhou pontos extras! Prisioneiros salvos: {player.PrisioneirosSalvos} | Seus prisioneiros serão zerados.");
+            player.PrisioneirosSalvos = 0;
         }
 
-        public void Zera()
+        public void Zera(Player player)
         {
-            throw new NotImplementedException();
+            throw new Exception($"Player {player.Nome} já zerou o game. Pontuação: ${player.Pontuacao}");
         }
 
-        public void Perde()
+        public void Perde(Player player)
         {
-            throw new NotImplementedException();
+            throw new Exception($"Player {player.Nome} já zerou o game. Pontuação: ${player.Pontuacao}");
         }
 
-        public void Finaliza()
+        public void Finaliza(Player player)
         {
-            throw new NotImplementedException();
+            GanhaPontosExtras(player);
+            player.EstadoAtual = new Finalizado();
+            Console.WriteLine($"Player {player.Nome} encerrou o game. Pontuação final: {player.Pontuacao}");
+        }
+
+        public void SalvaPrisioneiro(Player player)
+        {
+            throw new Exception($"Player {player.Nome} já zerou o game, não pode salvar mais prisioneiros.");
         }
     }
 }
