@@ -1,5 +1,6 @@
 ﻿using PadroesDeProjeto.State.Estados;
 using PadroesDeProjeto.State.Estados.Implementacoes;
+
 namespace PadroesDeProjeto.State
 {
     public class Player
