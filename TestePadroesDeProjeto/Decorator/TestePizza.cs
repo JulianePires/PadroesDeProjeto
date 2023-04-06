@@ -23,7 +23,7 @@ namespace PadroesDeProjeto.Tests.Decorator
         public void DeveRetornarPropriedadesPadraoAdicionadasAoComportamentoDosDecoradoresConcatenados()
         {
             var valorEsperado = 20 + 10 + 14;
-            var descricaoEsperada = "Pizza de mussarela" + " + calabresa" + " + shitake";
+            var descricaoEsperada = "Pizza de mussarela" + " + shitake" + " + calabresa";
             IPizza pizzaShitake = new PizzaShitake();
             IPizza pizzaCalabresaShitake = new PizzaCalabresa(pizzaShitake);
 
