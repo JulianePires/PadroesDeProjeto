@@ -1,7 +1,6 @@
 ﻿using PadroesDeProjeto.State.Estados;
 using PadroesDeProjeto.State.Estados.Implementacoes;
 using PadroesDeProjeto.Tests.Helpers.Builders.State;
-using static PadroesDeProjeto.Tests.State.PlayerTests;
 
 namespace PadroesDeProjeto.Tests.State
 {
@@ -151,36 +150,101 @@ namespace PadroesDeProjeto.Tests.State
         }
 
         [Fact]
-        public void ZeraShouldSetStateToZeradoWhenItIsEmAndamento()
+        public void ZeraShouldThrowAnExceptionWhenStateIsZerado()
         {
-            var estadoEsperado = new Zerado().ToString();
-            var player = new PlayerBuilder().WithState(new EmAndamento()).Generate();
+            var player = new PlayerBuilder().WithState(new Zerado()).Generate();
+            var mensagemEsperada = $"Player {player.Nome} já zerou o game. Pontuação: {player.Pontuacao}";
 
-            player.Zera();
-
-            Assert.Equal(estadoEsperado, player.EstadoAtual.ToString());
+            var exception = Assert.Throws<Exception>(() => player.Zera());
+            Assert.Equal(mensagemEsperada, exception.Message);
         }
 
         [Fact]
-        public void PerdeShouldSetStateToPerdidoWhenItIsEmAndamento()
+        public void PerdeShouldThrowAnExceptionWhenStateIsZerado()
         {
-            var estadoEsperado = new Perdido().ToString();
-            var player = new PlayerBuilder().WithState(new EmAndamento()).Generate();
+            var player = new PlayerBuilder().WithState(new Zerado()).Generate();
+            var mensagemEsperada = $"Player {player.Nome} já zerou o game. Pontuação: {player.Pontuacao}";
 
-            player.Perde();
-
-            Assert.Equal(estadoEsperado, player.EstadoAtual.ToString());
+            var exception = Assert.Throws<Exception>(() => player.Perde());
+            Assert.Equal(mensagemEsperada, exception.Message);
         }
 
         [Fact]
-        public void FinalizaShouldSetStateToFinalizadoWhenItIsEmAndamento()
+        public void FinalizaShouldCalculateExtraPointsAndSetStateToFinalizadoWhenItIsZerado()
         {
+            var pontosIniciais = 10;
+            var player = new PlayerBuilder()
+                .WithStateAndPoints(new Zerado(), pontosIniciais)
+                .Generate();
+
             var estadoEsperado = new Finalizado().ToString();
-            var player = new PlayerBuilder().WithState(new EmAndamento()).Generate();
+            var pontuacaoEsperada = pontosIniciais + 40 + player.PrisioneirosSalvos * 30;
 
             player.Finaliza();
 
             Assert.Equal(estadoEsperado, player.EstadoAtual.ToString());
+            Assert.Equal(pontuacaoEsperada, player.Pontuacao);
+        }
+
+        [Fact]
+        public void ZeraShouldThrowAnExceptionWhenStateIsPerdido()
+        {
+            var player = new PlayerBuilder().WithState(new Perdido()).Generate();
+            var mensagemEsperada = $"Player {player.Nome} já perdeu o game. Pontuação final: {player.Pontuacao}";
+
+            var exception = Assert.Throws<Exception>(() => player.Zera());
+            Assert.Equal(mensagemEsperada, exception.Message);
+        }
+
+        [Fact]
+        public void PerdeShouldThrowAnExceptionWhenStateIsPerdido()
+        {
+            var player = new PlayerBuilder().WithState(new Perdido()).Generate();
+            var mensagemEsperada = $"Player {player.Nome} já perdeu o game. Pontuação final: {player.Pontuacao}";
+
+            var exception = Assert.Throws<Exception>(() => player.Zera());
+            Assert.Equal(mensagemEsperada, exception.Message);
+        }
+
+        [Fact]
+        public void FinalizaShouldSetStateToFinalizadoWhenItIsPerdido()
+        {
+            var estadoEsperado = new Finalizado().ToString();
+            var player = new PlayerBuilder().WithState(new Perdido()).Generate();
+
+            player.Finaliza();
+
+            Assert.Equal(estadoEsperado, player.EstadoAtual.ToString());
+        }
+
+        [Fact]
+        public void ZeraShouldThrowAnExceptionWhenStateIsFinalizado()
+        {
+            var player = new PlayerBuilder().WithState(new Finalizado()).Generate();
+            var mensagemEsperada = $"Player {player.Nome} já finalizou o game. Pontuação final: {player.Pontuacao}";
+
+            var exception = Assert.Throws<Exception>(() => player.Zera());
+            Assert.Equal(mensagemEsperada, exception.Message);
+        }
+
+        [Fact]
+        public void PerdeShouldThrowAnExceptionWhenStateIsFinalizado()
+        {
+            var player = new PlayerBuilder().WithState(new Finalizado()).Generate();
+            var mensagemEsperada = $"Player {player.Nome} já finalizou o game. Pontuação final: {player.Pontuacao}";
+
+            var exception = Assert.Throws<Exception>(() => player.Perde());
+            Assert.Equal(mensagemEsperada, exception.Message);
+        }
+
+        [Fact]
+        public void FinalizaShouldThrowAnExceptionWhenStateIsFinalizado()
+        {
+            var player = new PlayerBuilder().WithState(new Finalizado()).Generate();
+            var mensagemEsperada = $"Player {player.Nome} já finalizou o game. Pontuação final: {player.Pontuacao}";
+
+            var exception = Assert.Throws<Exception>(() => player.Finaliza());
+            Assert.Equal(mensagemEsperada, exception.Message);
         }
     }
 

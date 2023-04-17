@@ -11,12 +11,12 @@
 
         public void Zera(Player player)
         {
-            throw new Exception($"Player {player.Nome} já zerou o game. Pontuação: ${player.Pontuacao}");
+            throw new Exception($"Player {player.Nome} já zerou o game. Pontuação: {player.Pontuacao}");
         }
 
         public void Perde(Player player)
         {
-            throw new Exception($"Player {player.Nome} já zerou o game. Pontuação: ${player.Pontuacao}");
+            throw new Exception($"Player {player.Nome} já zerou o game. Pontuação: {player.Pontuacao}");
         }
 
         public void Finaliza(Player player)
