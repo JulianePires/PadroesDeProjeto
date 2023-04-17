@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoBogus" Version="2.13.1" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.1.0" />
     <PackageReference Include="xunit" Version="2.4.1" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
@@ -23,7 +24,6 @@
 
   <ItemGroup>
     <Folder Include="ChainOfResponsability\Base\" />
-    <Folder Include="State\" />
     <Folder Include="TemplateMethod\" />
     <Folder Include="Strategy\" />
   </ItemGroup>
@@ -32,6 +32,7 @@
     <ProjectReference Include="..\Decorator\PadroesDeProjeto.Decorator.csproj" />
     <ProjectReference Include="..\PadroesDeProjeto.ChainOfResponsability\PadroesDeProjeto.ChainOfResponsability.csproj" />
     <ProjectReference Include="..\PadroesDeProjeto.TemplateMethod\PadroesDeProjeto.TemplateMethod.csproj" />
+    <ProjectReference Include="..\State\PadroesDeProjeto.State.csproj" />
     <ProjectReference Include="..\Strategy\PadroesDeProjeto.Strategy.csproj" />
   </ItemGroup>
 
