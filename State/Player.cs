@@ -5,7 +5,6 @@ namespace PadroesDeProjeto.State
 {
     public class Player
     {
-        //TODO: Implementar testes
         public string Nome { get; set; }
         public double Pontuacao { get; set; }
         public int PrisioneirosSalvos { get; set; }
