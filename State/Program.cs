@@ -1,7 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using PadroesDeProjeto.State;
 
-Player player = new Player("Maria Silva", 50);
+Player player = new("Maria Silva", 50);
 
 player.GanhaPontosExtras();
 
