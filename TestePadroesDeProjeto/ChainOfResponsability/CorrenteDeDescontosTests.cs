@@ -1,5 +1,4 @@
 ﻿using PadroesDeProjeto.ChainOfResponsability;
-using PadroesDeProjeto.ChainOfResponsability.Instancias;
 using PadroesDeProjeto.Tests.ChainOfResponsability.Base;
 
 namespace PadroesDeProjeto.Tests.ChainOfResponsability;
